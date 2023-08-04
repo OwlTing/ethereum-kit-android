@@ -7,12 +7,15 @@ enum class Chain(
     val syncInterval: Long,
     val isEIP1559Supported: Boolean
 ) {
-    Ethereum(1, 60, 2_000_000, 15, true),
+//    Ethereum(1, 60, 2_000_000, 15, true),
+    Ethereum(5, 60, 2_000_000, 15, true),
     BinanceSmartChain(56, 60, 10_000_000, 15, false),
-    Polygon(137, 60, 10_000_000, 15, true),
+//    Polygon(137, 60, 10_000_000, 15, true),
+    Polygon(80001, 60, 10_000_000, 15, true),
     Optimism(10, 60, 10_000_000, 15, false),
     ArbitrumOne(42161, 60, 10_000_000, 15, false),
-    Avalanche(43114, 60, 10_000_000, 15, true),
+//    Avalanche(43114, 60, 10_000_000, 15, true),
+    Avalanche(43113, 60, 10_000_000, 15, true),
     Gnosis(100, 60, 10_000_000, 15, true),
     Fantom(250, 60, 10_000_000, 15, false),
     EthereumGoerli(5, 1, 10_000_000, 15, true);

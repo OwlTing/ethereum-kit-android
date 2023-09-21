@@ -15,6 +15,6 @@ class OutgoingEip20Decoration(
 ) : TransactionDecoration() {
 
     override fun tags(): List<String> =
-        listOf(contractAddress.hex, TransactionTag.EIP20_TRANSFER, TransactionTag.tokenOutgoing(contractAddress.hex), TransactionTag.OUTGOING)
-
+//        listOf(contractAddress.hex, TransactionTag.EIP20_TRANSFER, TransactionTag.tokenOutgoing(contractAddress.hex), TransactionTag.OUTGOING)
+        listOf(TransactionTag.EVM_USDC, TransactionTag.EVM_USDC_OUTGOING, TransactionTag.OUTGOING)
 }

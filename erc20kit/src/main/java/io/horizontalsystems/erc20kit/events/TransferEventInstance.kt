@@ -12,15 +12,18 @@ class TransferEventInstance(
 ) : ContractEventInstance(contractAddress) {
 
     override fun tags(userAddress: Address): List<String> {
-        val tags = mutableListOf(contractAddress.hex, TransactionTag.EIP20_TRANSFER)
+//        val tags = mutableListOf(contractAddress.hex, TransactionTag.EIP20_TRANSFER)
+        val tags = mutableListOf(TransactionTag.EVM_USDC)
 
         if (from == userAddress) {
-            tags.add(TransactionTag.tokenOutgoing(contractAddress.hex))
+//            tags.add(TransactionTag.tokenOutgoing(contractAddress.hex))
+            tags.add(TransactionTag.EVM_USDC_OUTGOING)
             tags.add(TransactionTag.OUTGOING)
         }
 
         if (to == userAddress) {
-            tags.add(TransactionTag.tokenIncoming(contractAddress.hex))
+//            tags.add(TransactionTag.tokenIncoming(contractAddress.hex))
+            tags.add(TransactionTag.EVM_USDC_INCOMING)
             tags.add(TransactionTag.INCOMING)
         }
 

@@ -10,11 +10,14 @@ class TransactionTag(
 
     companion object {
         const val EVM_COIN = "ETH"
+        const val EVM_USDC = "USDC"
         const val INCOMING = "incoming"
         const val OUTGOING = "outgoing"
         const val SWAP = "swap"
         const val EVM_COIN_INCOMING = "${EVM_COIN}_${INCOMING}"
         const val EVM_COIN_OUTGOING = "${EVM_COIN}_${OUTGOING}"
+        const val EVM_USDC_INCOMING = "${EVM_USDC}_${INCOMING}"
+        const val EVM_USDC_OUTGOING = "${EVM_USDC}_${OUTGOING}"
         const val EIP20_TRANSFER = "eip20Transfer"
         const val EIP20_APPROVE = "eip20Approve"
 
